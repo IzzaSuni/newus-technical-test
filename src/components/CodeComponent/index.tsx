@@ -1,4 +1,5 @@
 import Editor from "react-simple-code-editor";
+// @ts-expect-error no types
 import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
