@@ -22,18 +22,22 @@ function Palindrom2(input: number): boolean {
 function FooBar(input: number) {
   if (input <= 0) return;
 
-  const res = [];
+  const arr = [];
   let i = 1;
 
   while (i !== input) {
     const is3 = i % 3 == 0;
     const is5 = i % 5 == 0;
 
-    res.push(is3 && is5 ? "catKitty" : is3 ? "cat" : is5 ? "Kitty" : i);
+    arr.push(is3 && is5 ? "catKitty" : is3 ? "cat" : is5 ? "Kitty" : i);
 
     i++;
   }
-  return res.join(", ");
+
+  const res = arr.join(", ");
+  console.log(res);
+
+  return res;
 }
 
 export { Palindrom, Palindrom2, FooBar };

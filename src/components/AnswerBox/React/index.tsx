@@ -78,7 +78,7 @@ export default function ReactSection() {
           {renderedData?.map((product) => (
             <div
               key={product?.id}
-              className="flex w-[320px] align-center bg-light-surface dark:bg-dark-surface p-4 rounded-md shadow-md dark:shadow-gray-700"
+              className="flex w-full lg:w-[320px] align-center bg-light-surface dark:bg-dark-surface p-4 rounded-md shadow-md dark:shadow-gray-700"
             >
               <img
                 src={product?.images[0]}

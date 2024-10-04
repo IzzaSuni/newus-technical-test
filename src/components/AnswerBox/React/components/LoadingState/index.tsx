@@ -6,7 +6,12 @@ export default function LoadingState() {
       {Array(12)
         .fill("")
         .map((e) => (
-          <Skeleton key={e} width={330} height={132} baseColor="gray" />
+          <Skeleton
+            containerClassName="w-full lg:w-[320px]"
+            height={132}
+            key={e}
+            baseColor="gray"
+          />
         ))}
     </div>
   );

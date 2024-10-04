@@ -9,6 +9,14 @@ import * as url from "url";
 const dirName = url.fileURLToPath(new URL(".", import.meta.url));
 
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      external: [
+        // @ts-expect-error no types
+        url.fileURLToPath(new URL("./src/testAnswer.ts", import.meta.url)),
+      ],
+    },
+  },
   server: {
     port: 3000,
   },

@@ -11,7 +11,7 @@ export default function Navbar() {
   const [menuIndex, setMenuIndex] = useMenuIndex();
   return (
     <div className="p-4">
-      <div className="flex items-center justify-center gap-2 relative">
+      <div className="flex items-center justify-left gap-2 relative lg:justify-center">
         {menus?.map((menu, index) => (
           <PilledItem
             isSelected={menuIndex === index}
@@ -19,7 +19,10 @@ export default function Navbar() {
             menu={menu}
           />
         ))}
-        <button className="absolute lg:right-8 right-2" onClick={toggleTheme}>
+        <button
+          className="absolute lg:right-8 right-[-16px]"
+          onClick={toggleTheme}
+        >
           <FontAwesomeIcon
             color={theme == Theme.light ? "black" : "white"}
             icon={theme === Theme.dark ? faMoon : faSun}

@@ -28,7 +28,7 @@ export default function CodeComponent({
         onValueChange={(e) => e}
         disabled
         highlight={(code) => highlight(code, languages.js)}
-        className="code-editor-container"
+        className="code-editor-container w-full"
         padding={10}
         value={(index ? `// Approacment ${index} \n` : "") + code.toString()}
       />

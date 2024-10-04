@@ -35,8 +35,8 @@ export default function Filter() {
   );
 
   return (
-    <div className="flex justify-between mb-4 sticky top-0 bg-light-bg dark:bg-dark-bg pt-8">
-      <form onSubmit={onSearch} className="flex w-1/2 gap-4">
+    <div className="flex justify-between mb-4 sticky top-0 bg-light-bg dark:bg-dark-bg pt-8 flex-col lg:flex-row gap-8">
+      <form onSubmit={onSearch} className="flex w-full gap-4">
         <Input
           value={filter?.search}
           placeholder="Search Product"
