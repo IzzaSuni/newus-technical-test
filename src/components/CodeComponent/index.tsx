@@ -33,7 +33,7 @@ export default function CodeComponent({
       />
       <div className="flex gap-2">
         <Input
-          value={inputValue ? inputValue : ""}
+          value={inputValue ? String(inputValue) : ""}
           type="number"
           placeholder="input"
           className="px-4 py-2 w-full"
