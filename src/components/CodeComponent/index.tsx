@@ -12,25 +12,30 @@ type CodeComponentProps = {
   index?: number;
   code: (arg: number) => unknown;
   max?: number;
+  codeText?: string;
 };
 
 export default function CodeComponent({
   index,
   code,
   max,
+  codeText,
 }: CodeComponentProps) {
   const [inputValue, setInputValue] = useState(0);
   const [result, setResult] = useState("");
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full">
       <Editor
         onValueChange={(e) => e}
         disabled
         highlight={(code) => highlight(code, languages.js)}
         className="code-editor-container w-full"
         padding={10}
-        value={(index ? `// Approacment ${index} \n` : "") + code.toString()}
+        value={
+          (index ? `// Approacment ${index} \n` : "") +
+          (codeText || code.toString())
+        }
       />
       <div className="flex gap-2">
         <Input
