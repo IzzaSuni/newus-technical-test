@@ -7,12 +7,12 @@ import { SWRConfig } from "swr";
 function App() {
   return (
     <SWRConfig value={{ provider: () => new Map() }}>
-      <Suspense fallback={null}>
-        <div className="lg:w-[1024px] m-auto p-4">
-          <Navbar />
+      <div className="lg:w-[1024px] m-auto p-4">
+        <Navbar />
+        <Suspense fallback={null}>
           <AnswerBox />
-        </div>
-      </Suspense>
+        </Suspense>
+      </div>
     </SWRConfig>
   );
 }
