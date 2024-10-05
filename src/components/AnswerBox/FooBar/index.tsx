@@ -7,7 +7,7 @@ export default function FooBarSection() {
   return (
     <>
       <ReactMarkdown>{dataMD}</ReactMarkdown>
-      <div className="flex justify-center gap-8">
+      <div className="flex justify-center gap-8 w-full">
         <CodeComponent code={FooBar} max={1000} />
       </div>
     </>

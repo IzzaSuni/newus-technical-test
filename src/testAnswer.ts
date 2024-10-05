@@ -1,3 +1,4 @@
+// @preserve
 function Palindrom(input: number) {
   if (input < 0) return false;
 
@@ -12,6 +13,7 @@ function Palindrom(input: number) {
   return reverted == input;
 }
 
+// @preserve
 function Palindrom2(input: number): boolean {
   if (input < 0) return false;
   const str = input.toString();
@@ -19,6 +21,7 @@ function Palindrom2(input: number): boolean {
   return str === str.split("").reverse().join("");
 }
 
+// @preserve
 function FooBar(input: number) {
   if (input <= 0) return;
 
