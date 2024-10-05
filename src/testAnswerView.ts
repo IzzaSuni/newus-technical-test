@@ -4,7 +4,7 @@ const FooBarText = `function FooBar(input: number) {
     const arr = [];
     let i = 1;
   
-    while (i !== input) {
+    while (i <= input) {
       const is3 = i % 3 == 0;
       const is5 = i % 5 == 0;
   
