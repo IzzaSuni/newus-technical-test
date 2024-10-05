@@ -15,7 +15,7 @@ export default function PalindromSection() {
       <ReactMarkdown>{dataMD}</ReactMarkdown>
       <div className="flex flex-col lg:flex-row justify-center gap-8 ">
         {data.map(({ fn, text }, index) => (
-          <CodeComponent code={fn} codeView={text} index={index + 1} />
+          <CodeComponent code={fn} codeText={text} index={index + 1} />
         ))}
       </div>
     </>
