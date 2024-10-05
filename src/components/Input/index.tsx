@@ -1,3 +1,4 @@
+import useTheme, { Theme } from "@/src/hooks/useTheme";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ForwardedRef, forwardRef } from "react";
@@ -12,6 +13,7 @@ const Input = forwardRef(
     ref: ForwardedRef<HTMLInputElement>
   ) => {
     const showReset = !!onReset && !!value;
+    const { theme } = useTheme();
 
     return (
       <div className="relative w-full">
@@ -24,6 +26,7 @@ const Input = forwardRef(
           <FontAwesomeIcon
             onClick={onReset}
             icon={faClose}
+            color={theme == Theme.light ? "black" : "white"}
             className="absolute right-3 top-1/3 cursor-pointer"
           />
         )}
